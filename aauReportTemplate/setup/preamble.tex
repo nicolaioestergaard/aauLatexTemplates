@@ -18,7 +18,6 @@
 % Make latex understand and use the typographic
 % rules of the language used in the document.
 \usepackage[danish,english]{babel}
-\usepackage{csquotes}
 % Use the palatino font
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palatino needs more leading (space between lines)
@@ -141,6 +140,10 @@
 % Used for code snippets
 % \usepackage{listings} % Needs additional configuration for non-supported languages.
 \usepackage{minted} % Supports more languages out of the box.
+
+% csquotes needs to be placed after minted to remove warnings from the fvextra package.
+% See https://tex.stackexchange.com/a/380808
+\usepackage{csquotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperlinks
